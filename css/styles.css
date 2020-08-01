@@ -5,9 +5,79 @@ html, body{
 }
 
 body{
-    background-color: #2b2b2b ;
+    background-color: #2b2b2b;
     font-family: 'Montserrat', sans-serif;
 }
+
+.wrapper{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: linear-gradient(90deg, rgba(2,0,.6,1) 0%, rgb(43, 43, 43) 40%, rgb(66, 66, 66)100%);
+}
+
+.box div{
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background-color: transparent;
+    border: 6px solid rgba(255, 255, 255, 0.589);
+
+}
+
+.box div:nth-child(1){
+    top: 12%;
+    left: 42%;
+    animation: animate 10s linear infinite;
+}
+.box div:nth-child(2){
+    top: 70%;
+    left: 50%;
+    animation: animate 7s linear infinite;
+}
+.box div:nth-child(3){
+    top: 17%;
+    left: 6%;
+    animation: animate 9s linear infinite;
+}
+.box div:nth-child(4){
+    top: 20%;
+    left: 60%;
+    animation: animate 10s linear infinite;
+}
+.box div:nth-child(5){
+    top: 67%;
+    left: 10%;
+    animation: animate 6s linear infinite;
+}
+.box div:nth-child(6){
+    top: 80%;
+    left: 70%;
+    animation: animate 12s linear infinite;
+}
+.box div:nth-child(7){
+    top: 60%;
+    left: 80%;
+    animation: animate 15s linear infinite;
+}
+.box div:nth-child(8){
+    top: 232%;
+    left: 25%;
+    animation: animate 16s linear infinite;
+}
+.box div:nth-child(9){
+    top: 90%;
+    left: 25%;
+    animation: animate 9s linear infinite;
+}
+.box div:nth-child(10){
+    top: 20%;
+    left: 80%;
+    animation: animate 5s linear infinite;
+}
+
+
 
 .navigation{
     background-color: #2b2b2b;
@@ -110,8 +180,8 @@ body{
 }
 
 .cv-pic{
-    float: left;
-    width: 240px;
+    float: right;
+    width: 350px;
     margin-right: 20px;
     margin-bottom: 20px;
     border-radius: 24px;
@@ -119,26 +189,28 @@ body{
 }
 
 .main h1{
-    color: white;
+
     font-weight: normal;
 }
 
 .centralizar{
-    text-align: left;
+    text-align: center;
+    font-size: 40px;
+    color: #f27609;
 }
 
 
 .main h2{
     color: white;
-    font-size: 16px;
+    font-size: 21px;
     text-transform: uppercase;
     font-weight: normal;
     margin-top: 40px;
 }
 
-.main a.meulink{
+.main a.github{
     text-decoration: none;
-    color: #f27609;
+    color:#f27609;
 }
 
 .main h3{
@@ -154,6 +226,7 @@ body{
     line-height: 24px;
     text-align: justify;
 }
+
 
 .caminho{
     list-style: none;
@@ -235,6 +308,11 @@ body{
 .back-link{
     text-decoration: none;
     color: #f27609;    
+}
+
+@keyframes animate{
+    0%{transform: scale(0) translateY(0) rotate(0);opacity: 0.8;}
+    100%{transform: scale(1.2) translateY(-90px) rotate(360deg);opacity: 0;}
 }
 
 @keyframes profile-capa{
