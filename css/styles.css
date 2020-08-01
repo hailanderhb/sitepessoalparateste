@@ -83,6 +83,7 @@ body{
     background-color: #2b2b2b;
     color: white;
     height: 50px;
+
 }
 
 
@@ -416,6 +417,8 @@ body{
 
 .menujs{
     height: auto;
+    animation-name: menuzin;
+    animation-duration: 0.6s;
 }
 
 .menujs ul{
@@ -431,6 +434,11 @@ body{
     border-bottom: solid grey 1px;
     width: 100%;
     padding: 0;
+}
+
+@keyframes menuzin{
+    0% {opacity: 0; transform: translate(0px,-50px)}
+    100% {opacity: 1; transform: translate(0px,0px)}
 }
 
 }
