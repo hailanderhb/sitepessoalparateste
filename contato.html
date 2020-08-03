@@ -49,18 +49,59 @@
 				</ul>
 
 				<h1>Contato</h1>
+
+				<form action="https://postmail.invotes.com/send"
+			method="post" id="email_form">
+			<h3>E-mail:</h3>
+			<input type="text" name="extra_email"
+						placeholder="E-mail" /> <br><br>
+			<h3>Assunto:</h3>
+			<input type="text" name="subject" placeholder="Assunto" /><br><br>
+
+			<h3>Mensagem:</h3>
+			<textarea name="text" placeholder="Mensagem"></textarea><br><br>
+			<input type="hidden" name="access_token" value="ltl83hi3ptpmzughf0ad522o" />
+			<!-- return urls can be fully qualified -OR-
+				start with / for root relative -OR-
+				start with . for url relative --> 
+			<input type="hidden" name="success_url" value="http://www.hailanderdev.epizy.com/" />
+			<input type="hidden" name="error_url" value=".?message=Email+could+not+be+sent.&isError=1" />
+		
+
+			<!-- set the reply-to address -->
+			<!-- <input type="text" name="reply_to"
+						placeholder="Your Email" /> -->
+
+			<!-- to append extra fields, use the extra_ prefix.
+				Entries will be appended to your message body. -->
+			<!-- <input type="text" name="extra_phone_number"
+						placeholder="Phone Number" /> -->
+
+			<!-- to split your message into 160 chars
+				for an sms gateway -->
+			<!-- <input type="hidden"
+						name="sms_format" value="true" /> -->
+		
+			<input id="submit_form" type="submit" value="Enviar" />
+			<!-- not required, but we'd appreciate it if you'd link to us somewhere on your site -->
 			
-
-				<h3>E-mail:</h3>
-				<p>Hailanderhb@gmail.com</p>
-
-				<h3>Telefone:</h3>
-				<p>(22) 99819-35##</p>
-
+		</form>
+			
+		<!-- optional, prevents the submit button from being pressed more than once -->
+		<script>
+			var submitButton = document.getElementById("submit_form");
+			var form = document.getElementById("email_form");
+			form.addEventListener("submit", function (e) {
+				setTimeout(function() {
+					submitButton.value = "Enviando seu e-mail na velocidade da luz...";
+					submitButton.disabled = true;
+				}, 1);
+			});
+		</script> 
 				<h3>Redes Sociais:</h3>
 				<a href="https://www.linkedin.com/in/hailander-bastos-09425554/" target="_blank"><img class="social-img" src="img/linkedin.png" alt="link para o linkedin"></a>
 				<a href="https://www.instagram.com/hailanderbastos/" target="_blank"><img class="social-img" src="img/instagram.png" alt="link para o instagram"></a>
-				
+				<h3><a class="git" href="https://github.com/hailanderhb/" target="_blank">>>Meu Github<<</a></h3>
 				<br><br>
 
 				<a class="back-link" href="index.html">&ldca; Voltar ao início<a>

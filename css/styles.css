@@ -269,6 +269,12 @@ body{
     text-decoration: none;
 }
 
+.git{
+    color: #f27609;
+    text-decoration: none;
+}
+
+
 .blackbox{
     width: 100%;
     height: 100%;
